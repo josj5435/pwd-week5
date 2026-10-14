@@ -19,6 +19,8 @@ export default defineConfig({
   esbuild: {
     loader: 'jsx',
     include: /\/src\/.*\.jsx?$/,
+    // Override Vite's default exclusion of .js files.
+    exclude: [],
   },
   optimizeDeps: {
     esbuildOptions: {
